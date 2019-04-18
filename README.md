@@ -1,3 +1,27 @@
+##Read Book ONline
+
+###Task 1
+
+
+This feature includes a lot of small tasks:
+
+  react project set up with eslint
+
+  react router and redux setup
+  
+  forms and form validation
+
+  several page components: HomePage, SignupPage and DashboardPage
+
+  node js express project setup with babel and eslint
+
+  authentication with JWT
+
+  API for user authentication
+
+  user data, JWT generation
+  authorise Routes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
