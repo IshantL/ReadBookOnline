@@ -1,26 +1,26 @@
-##Read Book ONline
+## Read Book ONline
 
-###Task 1
+### Task 1
 
 ![alt text](https://github.com/IshantL/ReadBookOnline/blob/master/taskImages/29779602-b072dc4c-8c1b-11e7-9e79-15b49229660e.png)
 
 This feature includes a lot of small tasks:
 
-  react project set up with eslint
+ - [x] react project set up with eslint
 
-  react router and redux setup
+ - [x] react router and redux setup
   
-  forms and form validation
+ - [x] forms and form validation
 
-  several page components: HomePage, SignupPage and DashboardPage
+ - [x] several page components: HomePage, SignupPage and DashboardPage
 
-  node js express project setup with babel and eslint
+ - [x] node js express project setup with babel and eslint
 
-  authentication with JWT
+ - [x] authentication with JWT
 
-  API for user authentication
+ - [x] API for user authentication
 
-  user data, JWT generation
+ - [x] user data, JWT generation
   authorise Routes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
