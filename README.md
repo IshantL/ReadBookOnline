@@ -2,6 +2,7 @@
 
 ###Task 1
 
+![alt text](https://github.com/IshantL/ReadBookOnline/blob/master/taskImages/29779602-b072dc4c-8c1b-11e7-9e79-15b49229660e.png)
 
 This feature includes a lot of small tasks:
 
