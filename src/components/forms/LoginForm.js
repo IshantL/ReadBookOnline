@@ -11,10 +11,43 @@ class LoginForm extends Component{
         errors: {}
     };
     
+    onChange = e =>{
+        this.setState({
+            data:{ ...this.state.data, [e.target.name]:e.target.value}
+        })
+    }
+
+    onSubmit = () =>{
+
+    }
+    
     render(){
+
+        const { data }= this.state;
         return(
-            <Form>
-                
+            <Form onSubmit={this.onSubmit}>
+                <Form.Field>
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@example.com"
+                        value={data.email}
+                        onChange={this.onChange}
+                        />
+                </Form.Field>
+                <Form.Field>
+                    <label htmlFor="password">Email</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="password"
+                        value={data.password}
+                        onChange={this.onChange}
+                        />
+                </Form.Field>
                 <Button primary>Login</Button>
             </Form>
         )
