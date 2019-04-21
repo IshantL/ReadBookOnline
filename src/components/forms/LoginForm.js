@@ -21,7 +21,7 @@ import InlineError from '../messages/InlineError';
 
     onSubmit = () =>{
         const errors = this.validate(this.state.data);
-        this.setState({ errors })
+        this.setState({ errors });
     }
 
     validate = data =>{
@@ -33,10 +33,10 @@ import InlineError from '../messages/InlineError';
 
     render(){
 
-        const { data }= this.state;
+        const { data, errors }= this.state;
         return(
             <Form onSubmit={this.onSubmit}>
-                <Form.Field>
+                <Form.Field error = { !!errors.email}>
                     <label htmlFor="email">Email</label>
                     <input
                         type="email"
@@ -46,9 +46,10 @@ import InlineError from '../messages/InlineError';
                         value={data.email}
                         onChange={this.onChange}
                         />
+                        {errors.email && <InlineError text={ errors.email} />}
                 </Form.Field>
-                <Form.Field>
-                    <label htmlFor="password">Email</label>
+                <Form.Field  error = { !!errors.password}>
+                    <label htmlFor="password">password</label>
                     <input
                         type="password"
                         id="password"
@@ -57,6 +58,7 @@ import InlineError from '../messages/InlineError';
                         value={data.password}
                         onChange={this.onChange}
                         />
+                        {errors.password && <InlineError text={ errors.password} />}                        
                 </Form.Field>
                 <Button primary>Login</Button>
             </Form>
