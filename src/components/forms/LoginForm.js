@@ -1,7 +1,8 @@
 import React,{ Component} from 'react';
-import {Form, Button } from 'semantic-ui-react';
+import {Form, Button, ListContent } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
+import PropTypes from 'prop-types';
 
  class LoginForm extends Component{
     state = {
@@ -22,6 +23,9 @@ import InlineError from '../messages/InlineError';
     onSubmit = () =>{
         const errors = this.validate(this.state.data);
         this.setState({ errors });
+        if(Object.keys(errors).length === 0){
+            this.props.submit(this.state.data);
+        }
     }
 
     validate = data =>{
@@ -66,4 +70,7 @@ import InlineError from '../messages/InlineError';
     }
 }
 
+LoginForm.propTypes = {
+    submit: PropTypes.func.isRequired
+}
 export default LoginForm;
