@@ -1,18 +1,22 @@
 import React,{ Component} from 'react';
+import {Form, Button } from 'semantic-ui-react';
 
 class LoginForm extends Component{
     state = {
-        data:{},
+        data:{
+            email:'',
+            password : ''
+        },
         loading: false,
         errors: {}
     };
     
     render(){
         return(
-            <div>
-
-
-            </div>
+            <Form>
+                
+                <Button primary>Login</Button>
+            </Form>
         )
     }
 }
