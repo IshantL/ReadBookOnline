@@ -1,7 +1,9 @@
 import React,{ Component} from 'react';
 import {Form, Button } from 'semantic-ui-react';
+import Validator from 'validator';
+import InlineError from '../messages/InlineError';
 
-class LoginForm extends Component{
+ class LoginForm extends Component{
     state = {
         data:{
             email:'',
@@ -18,9 +20,17 @@ class LoginForm extends Component{
     }
 
     onSubmit = () =>{
-
+        const errors = this.validate(this.state.data);
+        this.setState({ errors })
     }
-    
+
+    validate = data =>{
+        const errors ={};
+        if(!Validator.isEmail(data.email)) errors.email = "Invalid Email";
+        if(!data.password) errors.password = "Can't be blank";
+        return errors;
+    }
+
     render(){
 
         const { data }= this.state;
